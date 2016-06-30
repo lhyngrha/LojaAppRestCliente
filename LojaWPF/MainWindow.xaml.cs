@@ -60,6 +60,7 @@ namespace LojaWPF
             string s = "=" + JsonConvert.SerializeObject(fl);
             var content = new StringContent(s, Encoding.UTF8,"application/x-www-form-urlencoded");
             await httpClient.PostAsync("/20131011110029/api/fabricante", content);
+            SelectFabricantes();
         }
 
         private async void btnList_Click(object sender, RoutedEventArgs e)
@@ -110,7 +111,7 @@ namespace LojaWPF
             httpClient.BaseAddress = new Uri(ip);
             Models.Veiculo f = new Models.Veiculo
             {
-                Id =1,// int.Parse(txtId.Text),
+                Id = int.Parse(txtId1.Text),
                 Modelo = txtModelo.Text,
                 idFabricante = int.Parse(cbox.SelectedValue.ToString())
             };
@@ -128,7 +129,6 @@ namespace LojaWPF
             Models.Veiculo f = new Models.Veiculo
             {
                 Id = int.Parse(txtId.Text),
-
                 Modelo = txtDesc.Text
             };
 
@@ -147,9 +147,13 @@ namespace LojaWPF
             var response = await httpClient.GetAsync("/20131011110029/api/veiculo");
             var str = response.Content.ReadAsStringAsync().Result;
 
-            List<Models.Veiculo> obj = JsonConvert.DeserializeObject<List<Models.Veiculo>>(str);
+            List<Models.Veiculo> carro = JsonConvert.DeserializeObject<List<Models.Veiculo>>(str, new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            });
 
-            ListBoxVeiculos.ItemsSource = obj;
+            ListBoxVeiculos.ItemsSource = carro;
+
         }
 
         private async void buttonDelete_Click(object sender, RoutedEventArgs e)

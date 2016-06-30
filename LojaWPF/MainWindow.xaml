@@ -9,11 +9,11 @@
     <Grid Margin="0,0,2,0">
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="18" Margin="25,10,0,0" TextWrapping="Wrap" Text="id" VerticalAlignment="Top" Width="148"/>
         <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="23" Margin="191,10,0,0" TextWrapping="Wrap" Text="Descricao" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="75" Click="btnInsert_Click"/>
-        <Button x:Name="btnDelete" Content="Deletar" HorizontalAlignment="Left" Margin="123,42,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click"/>
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="254,47,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click"/>
-        <Button x:Name="btnList" Content="Listar" HorizontalAlignment="Left" Margin="394,47,0,0" VerticalAlignment="Top" Width="75" Click="btnList_Click"/>
-        <ListBox Name="ListBoxFabricantes" Margin="10,82,730,43">
+        <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="27,41,0,0" VerticalAlignment="Top" Width="75" Click="btnInsert_Click"/>
+        <Button x:Name="btnDelete" Content="Deletar" HorizontalAlignment="Left" Margin="115,41,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="195,41,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click"/>
+        <Button x:Name="btnList" Content="Listar" HorizontalAlignment="Left" Margin="275,41,0,0" VerticalAlignment="Top" Width="75" Click="btnList_Click"/>
+        <ListBox Name="ListBoxFabricantes" Margin="10,103,569,22">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -33,11 +33,11 @@
         <ComboBox x:Name="cbox" HorizontalAlignment="Left" Margin="787,39,0,0" VerticalAlignment="Top" Width="120"/>
         <DatePicker x:Name="data1" HorizontalAlignment="Left" Margin="926,40,0,0" VerticalAlignment="Top" Width="120"/>
         <DatePicker x:Name="data2" HorizontalAlignment="Left" Margin="926,69,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="buttonInserir" Content="Inserir" HorizontalAlignment="Left" Margin="507,78,0,0" VerticalAlignment="Top" Width="75" Click="buttonInserir_Click"/>
-        <Button x:Name="buttonUpdate" Content="Update" HorizontalAlignment="Left" Margin="587,78,0,0" VerticalAlignment="Top" Width="75" Click="buttonUpdate_Click"/>
-        <Button x:Name="buttonListar" Content="Listar" HorizontalAlignment="Left" Margin="667,78,0,0" VerticalAlignment="Top" Width="75" Click="buttonListar_Click"/>
-        <Button x:Name="buttonDelete" Content="Deletar" HorizontalAlignment="Left" Margin="747,78,0,0" VerticalAlignment="Top" Width="75" Click="buttonDelete_Click"/>
-        <ListBox Name="ListBoxVeiculos" Margin="507,103,71,22">
+        <Button x:Name="buttonInserir" Content="Inserir" HorizontalAlignment="Left" Margin="507,68,0,0" VerticalAlignment="Top" Width="75" Click="buttonInserir_Click"/>
+        <Button x:Name="buttonUpdate" Content="Update" HorizontalAlignment="Left" Margin="587,68,0,0" VerticalAlignment="Top" Width="75" Click="buttonUpdate_Click"/>
+        <Button x:Name="buttonListar" Content="Listar" HorizontalAlignment="Left" Margin="667,68,0,0" VerticalAlignment="Top" Width="75" Click="buttonListar_Click"/>
+        <Button x:Name="buttonDelete" Content="Deletar" HorizontalAlignment="Left" Margin="747,68,0,0" VerticalAlignment="Top" Width="75" Click="buttonDelete_Click"/>
+        <ListBox Name="ListBoxVeiculos" Margin="507,103,10,22">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
